@@ -19,11 +19,13 @@ export default defineComponent({
   <div v-if="!city" class="city-link">
     <div>
       <div>
-        <h2 class="city-name skeleton-loading">XXXXXXXXXXX</h2>
-        <span class="skeleton-loading">XX:XX</span>
+        <h2 class="city-name skeleton-loading" data-testid="skeleton-city-name">XXXXXXXXXXX</h2>
+        <span class="skeleton-loading" data-testid="skeleton-city-time">XX:XX</span>
       </div>
       <div>
-        <span class="city-temperature skeleton-loading">XX°</span>
+        <span class="city-temperature skeleton-loading" data-testid="skeleton-city-temperature"
+          >XX°</span
+        >
       </div>
     </div>
     <div>
@@ -31,7 +33,11 @@ export default defineComponent({
         <span class="skeleton-loading">XXXXX XXXXXX</span>
       </div>
       <div>
-        <span class="city-max-min-temperature skeleton-loading">Max: XX° Min: XX°</span>
+        <span
+          class="city-max-min-temperature skeleton-loading"
+          data-testid="skeleton-max-min-temperature"
+          >Max: XX° Min: XX°</span
+        >
       </div>
     </div>
   </div>
@@ -39,24 +45,29 @@ export default defineComponent({
     v-else
     :to="'/city/' + city.id"
     :class="['city-link', city.weather[0].main.toLocaleLowerCase()].join(' ')"
+    data-testid="city-link"
   >
     <div>
       <div>
-        <h2 class="city-name">{{ city.name }}</h2>
-        <span>{{ format(city.dt * 1000, 'HH:mm') }}</span>
+        <h2 class="city-name" data-testid="city-name">{{ city.name }}</h2>
+        <span data-testid="city-time">{{ format(city.dt * 1000, 'HH:mm') }}</span>
       </div>
       <div>
-        <span class="city-temperature">{{ Math.round(city.main.temp) }}°</span>
+        <span class="city-temperature" data-testid="city-temperature"
+          >{{ Math.round(city.main.temp) }}°</span
+        >
       </div>
     </div>
     <div>
       <div>
-        <span>{{ $t('weatherCondition.' + city.weather[0].description.replace(/ /g, '_')) }}</span>
+        <span data-testid="city-weather-condition">{{
+          $t('weatherCondition.' + city.weather[0].description.replace(/ /g, '_'))
+        }}</span>
       </div>
       <div>
-        <span class="city-max-min-temperature"
-          >Max: {{ city.main.temp_max }}° Min: {{ city.main.temp_min }}°</span
-        >
+        <span class="city-max-min-temperature" data-testid="city-max-min-temperature">
+          Max: {{ city.main.temp_max }}° Min: {{ city.main.temp_min }}°
+        </span>
       </div>
     </div>
   </RouterLink>
