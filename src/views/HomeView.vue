@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue'
 import { useQuery } from '@tanstack/vue-query'
 import CityLink from '@/components/CityLink.vue'
+import SearchInput from '@/components/SearchInput.vue'
 import type { WeatherGroupResponse } from '@/types/OpenWeatherApi'
 
 const API_KEY = ''
@@ -114,12 +115,7 @@ const filteredCities = computed(() => {
   <div class="weather-container">
     <h1 class="title">{{ $t('common.weather') }}</h1>
 
-    <input
-      v-model="searchTerm"
-      type="text"
-      :placeholder="$t('homeView.searchPlaceholder')"
-      class="search-bar"
-    />
+    <SearchInput v-model="searchTerm" :placeholder="$t('homeView.searchPlaceholder')" />
 
     <div v-if="isLoading" class="loading">Loading weather data...</div>
     <div v-else-if="error" class="error">Error loading data.</div>
@@ -143,21 +139,6 @@ const filteredCities = computed(() => {
   font-size: 2rem;
   margin-bottom: 10px;
   color: white;
-}
-
-.search-bar {
-  width: -webkit-fill-available;
-  padding: 8px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-.search-bar:focus {
-  outline: 2px solid rgba(255, 255, 255, 0.2);
-  outline-offset: 2px;
 }
 
 .city-list {
