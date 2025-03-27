@@ -1,0 +1,11 @@
+{
+  "common": {
+    "weather": "Weather",
+    "temperature": "Temperature",
+    "humidity": "Humidity",
+    "pressure": "Pressure"
+  },
+  "homeView": {
+    "searchPlaceholder": "Search city"
+  }
+}

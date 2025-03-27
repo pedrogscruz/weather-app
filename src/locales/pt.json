@@ -1,0 +1,11 @@
+{
+  "common": {
+    "weather": "Tempo",
+    "temperature": "Temperatura",
+    "humidity": "Umidade",
+    "pressure": "Pressão"
+  },
+  "homeView": {
+    "searchPlaceholder": "Buscar cidade"
+  }
+}

@@ -111,9 +111,14 @@ const filteredCities = computed(() => {
 
 <template>
   <div class="weather-container">
-    <h1 class="title">Weather</h1>
+    <h1 class="title">{{ $t('common.weather') }}</h1>
 
-    <input v-model="searchTerm" type="text" placeholder="Search city" class="search-bar" />
+    <input
+      v-model="searchTerm"
+      type="text"
+      :placeholder="$t('homeView.searchPlaceholder')"
+      class="search-bar"
+    />
 
     <div v-if="isLoading" class="loading">Loading weather data...</div>
     <div v-else-if="error" class="error">Error loading data.</div>
