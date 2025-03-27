@@ -117,8 +117,23 @@ const filteredCities = computed(() => {
 
     <SearchInput v-model="searchTerm" :placeholder="$t('homeView.searchPlaceholder')" />
 
-    <div v-if="isLoading" class="loading">Loading weather data...</div>
-    <div v-else-if="error" class="error">Error loading data.</div>
+    <div v-if="isLoading" class="loading">
+      <ul class="city-list">
+        <li v-for="(_, index) in Array.from({ length: 3 })" :key="index">
+          <CityLink />
+        </li>
+      </ul>
+    </div>
+    <div v-else-if="error" class="message">
+      ⚠️<br />
+      Oops! No internet connection.<br />
+      <span class="message-description">Please check your network and try again.</span>
+    </div>
+    <div v-else-if="filteredCities.length === 0" class="message">
+      🌍🏙️<br />
+      Oops! No results found.<br />
+      <span class="message-description">Please check the city name and try again.</span>
+    </div>
 
     <ul v-else class="city-list">
       <li v-for="city in filteredCities" :key="city.id">
@@ -147,5 +162,16 @@ const filteredCities = computed(() => {
   row-gap: 10px;
   list-style: none;
   padding: 0;
+}
+
+.message {
+  color: white;
+  text-align: center;
+}
+
+.message-description {
+  color: #717171;
+  text-align: center;
+  font-size: 14px;
 }
 </style>

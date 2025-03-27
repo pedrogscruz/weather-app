@@ -10,14 +10,33 @@ export default defineComponent({
   props: {
     city: {
       type: Object as PropType<CityWeather>,
-      required: true,
     },
   },
 })
 </script>
 
 <template>
+  <div v-if="!city" class="city-link">
+    <div>
+      <div>
+        <h2 class="city-name skeleton-loading">XXXXXXXXXXX</h2>
+        <span class="skeleton-loading">XX:XX</span>
+      </div>
+      <div>
+        <span class="city-temperature skeleton-loading">XX°</span>
+      </div>
+    </div>
+    <div>
+      <div>
+        <span class="skeleton-loading">XXXXX XXXXXX</span>
+      </div>
+      <div>
+        <span class="city-max-min-temperature skeleton-loading">Max: XX° Min: XX°</span>
+      </div>
+    </div>
+  </div>
   <RouterLink
+    v-else
     :to="'/city/' + city.id"
     :class="['city-link', city.weather[0].main.toLocaleLowerCase()].join(' ')"
   >
@@ -49,7 +68,7 @@ export default defineComponent({
   flex-direction: column;
   row-gap: 10px;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-size: 100% auto;
@@ -145,5 +164,34 @@ export default defineComponent({
 
 .clouds {
   background-image: url('/Clouds.jpeg');
+}
+
+.skeleton-loading {
+  position: relative;
+  color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-shadow: none;
+}
+
+.skeleton-loading:before {
+  position: absolute;
+  content: ' ';
+  z-index: 2;
+  inset: 0;
+  animation: skeletonAnimation 1s linear infinite alternate;
+  border-radius: 3px;
+}
+
+@keyframes skeletonAnimation {
+  0% {
+    background-color: hsl(200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }
 </style>
