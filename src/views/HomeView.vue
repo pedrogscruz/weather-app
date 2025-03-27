@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useQuery } from '@tanstack/vue-query'
+import CityLink from '@/components/CityLink.vue'
 import type { WeatherGroupResponse } from '@/types/OpenWeatherApi'
 
 const API_KEY = ''
@@ -125,13 +126,7 @@ const filteredCities = computed(() => {
 
     <ul v-else class="city-list">
       <li v-for="city in filteredCities" :key="city.id">
-        <RouterLink :to="'/city/' + city.id" class="city-link">
-          <h2>{{ city.name }}</h2>
-          <p>{{ new Date(city.dt * 1000).toLocaleTimeString() }}</p>
-          <p>{{ city.main.temp }}°C</p>
-          <p>{{ $t('weatherCondition.' + city.weather[0].description.replace(/ /g, '_')) }}</p>
-          <p>Min: {{ city.main.temp_min }}°C | Max: {{ city.main.temp_max }}°C</p>
-        </RouterLink>
+        <CityLink :city="city" />
       </li>
     </ul>
   </div>
@@ -147,34 +142,29 @@ const filteredCities = computed(() => {
 .title {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: white;
 }
 
 .search-bar {
   width: -webkit-fill-available;
   padding: 8px;
   margin-bottom: 20px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.search-bar:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.2);
+  outline-offset: 2px;
 }
 
 .city-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   list-style: none;
   padding: 0;
-}
-
-.city-link {
-  display: block;
-  padding: 15px;
-  text-align: center;
-  margin-bottom: 10px;
-  background: #f9f9f9;
-  text-decoration: none;
-  color: #333;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.city-link:hover {
-  background: #e3e3e3;
 }
 </style>
