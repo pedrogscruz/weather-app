@@ -7,5 +7,68 @@
   },
   "homeView": {
     "searchPlaceholder": "Buscar cidade"
+  },
+  "weatherCondition": {
+    "few_clouds": "Poucas Nuvens",
+    "scattered_clouds": "Nuvens Dispersas",
+    "broken_clouds": "Nuvens Quebradas",
+    "overcast_clouds": "Nublado",
+
+    "clear_sky": "Céu Limpo",
+
+    "thunderstorm_with_light_rain": "Trovoada Com Chuva Leve",
+    "thunderstorm_with_rain": "Trovoada Com Chuva",
+    "thunderstorm_with_heavy_rain": "Trovoada Com Chuva Forte",
+    "light_thunderstorm": "Trovoada Leve",
+    "thunderstorm": "Trovoada",
+    "heavy_thunderstorm": "Trovoada Forte",
+    "ragged_thunderstorm": "Trovoada Irregular",
+    "thunderstorm_with_light_drizzle": "Trovoada Com Chuvisco Leve",
+    "thunderstorm_with_drizzle": "Trovoada Com Chuvisco",
+    "thunderstorm_with_heavy_drizzle": "Trovoada Com Chuvisco Intenso",
+
+    "light_intensity_drizzle": "Chuvisco De Baixa Intensidade",
+    "drizzle": "Chuvisco",
+    "heavy_intensity_drizzle": "Chuvisco De Alta Intensidade",
+    "light_intensity_drizzle_rain": "Chuva Fina De Baixa Intensidade",
+    "drizzle_rain": "Chuva Fina",
+    "heavy_intensity_drizzle_rain": "Chuva Fina De Alta Intensidade",
+    "shower_rain_and_drizzle": "Pancada De Chuva Com Chuvisco",
+    "heavy_shower_rain_and_drizzle": "Pancada De Chuva Forte Com Chuvisco",
+    "shower_drizzle": "Chuvisco Intermitente",
+
+    "light_rain": "Chuva Leve",
+    "moderate_rain": "Chuva Moderada",
+    "heavy_intensity_rain": "Chuva De Alta Intensidade",
+    "very_heavy_rain": "Chuva Muito Forte",
+    "extreme_rain": "Chuva Extrema",
+    "freezing_rain": "Chuva Congelante",
+    "light_intensity_shower_rain": "Pancada De Chuva Leve",
+    "shower_rain": "Pancada De Chuva",
+    "heavy_intensity_shower_rain": "Pancada De Chuva Forte",
+    "ragged_shower_rain": "Pancada De Chuva Irregular",
+
+    "light_snow": "Neve Leve",
+    "snow": "Neve",
+    "heavy_snow": "Neve Intensa",
+    "sleet": "Chuva Congelada",
+    "light_shower_sleet": "Pancada Leve De Chuva Congelada",
+    "shower_sleet": "Pancada De Chuva Congelada",
+    "light_rain_and_snow": "Chuva Fraca Com Neve",
+    "rain_and_snow": "Chuva Com Neve",
+    "light_shower_snow": "Pancada Leve De Neve",
+    "shower_snow": "Pancada De Neve",
+    "heavy_shower_snow": "Pancada Forte De Neve",
+
+    "mist": "Névoa",
+    "smoke": "Fumaça",
+    "haze": "Neblina",
+    "sand_dust_whirls": "Redemoinhos De Areia/Poeira",
+    "fog": "Nevoeiro",
+    "sand": "Areia",
+    "dust": "Poeira",
+    "volcanic_ash": "Cinzas Vulcânicas",
+    "squalls": "Rajadas De Vento",
+    "tornado": "Tornado"
   }
 }

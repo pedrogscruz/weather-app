@@ -7,5 +7,68 @@
   },
   "homeView": {
     "searchPlaceholder": "Search city"
+  },
+  "weatherCondition": {
+    "few_clouds": "Few Clouds",
+    "scattered_clouds": "Scattered Clouds",
+    "broken_clouds": "Broken Clouds",
+    "overcast_clouds": "Overcast Clouds",
+
+    "clear_sky": "Clear Sky",
+
+    "thunderstorm_with_light_rain": "Thunderstorm With Light Rain",
+    "thunderstorm_with_rain": "Thunderstorm With Rain",
+    "thunderstorm_with_heavy_rain": "Thunderstorm With Heavy Rain",
+    "light_thunderstorm": "Light Thunderstorm",
+    "thunderstorm": "Thunderstorm",
+    "heavy_thunderstorm": "Heavy Thunderstorm",
+    "ragged_thunderstorm": "Ragged Thunderstorm",
+    "thunderstorm_with_light_drizzle": "Thunderstorm With Light Drizzle",
+    "thunderstorm_with_drizzle": "Thunderstorm With Drizzle",
+    "thunderstorm_with_heavy_drizzle": "Thunderstorm With Heavy Drizzle",
+
+    "light_intensity_drizzle": "Light Intensity Drizzle",
+    "drizzle": "Drizzle",
+    "heavy_intensity_drizzle": "Heavy Intensity Drizzle",
+    "light_intensity_drizzle_rain": "Light Intensity Drizzle Rain",
+    "drizzle_rain": "Drizzle Rain",
+    "heavy_intensity_drizzle_rain": "Heavy Intensity Drizzle Rain",
+    "shower_rain_and_drizzle": "Shower Rain And Drizzle",
+    "heavy_shower_rain_and_drizzle": "Heavy Shower Rain And Drizzle",
+    "shower_drizzle": "Shower Drizzle",
+
+    "light_rain": "Light Rain",
+    "moderate_rain": "Moderate Rain",
+    "heavy_intensity_rain": "Heavy Intensity Rain",
+    "very_heavy_rain": "Very Heavy Rain",
+    "extreme_rain": "Extreme Rain",
+    "freezing_rain": "Freezing Rain",
+    "light_intensity_shower_rain": "Light Intensity Shower Rain",
+    "shower_rain": "Shower Rain",
+    "heavy_intensity_shower_rain": "Heavy Intensity Shower Rain",
+    "ragged_shower_rain": "Ragged Shower Rain",
+
+    "light_snow": "Light Snow",
+    "snow": "Snow",
+    "heavy_snow": "Heavy Snow",
+    "sleet": "Sleet",
+    "light_shower_sleet": "Light Shower Sleet",
+    "shower_sleet": "Shower Sleet",
+    "light_rain_and_snow": "Light Rain And Snow",
+    "rain_and_snow": "Rain And Snow",
+    "light_shower_snow": "Light Shower Snow",
+    "shower_snow": "Shower Snow",
+    "heavy_shower_snow": "Heavy Shower Snow",
+
+    "mist": "Mist",
+    "smoke": "Smoke",
+    "haze": "Haze",
+    "sand_dust_whirls": "Sand/Dust Whirls",
+    "fog": "Fog",
+    "sand": "Sand",
+    "dust": "Dust",
+    "volcanic_ash": "Volcanic Ash",
+    "squalls": "Squalls",
+    "tornado": "Tornado"
   }
 }

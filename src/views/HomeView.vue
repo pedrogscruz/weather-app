@@ -129,7 +129,7 @@ const filteredCities = computed(() => {
           <h2>{{ city.name }}</h2>
           <p>{{ new Date(city.dt * 1000).toLocaleTimeString() }}</p>
           <p>{{ city.main.temp }}°C</p>
-          <p>{{ city.weather[0].description }}</p>
+          <p>{{ $t('weatherCondition.' + city.weather[0].description.replace(/ /g, '_')) }}</p>
           <p>Min: {{ city.main.temp_min }}°C | Max: {{ city.main.temp_max }}°C</p>
         </RouterLink>
       </li>
