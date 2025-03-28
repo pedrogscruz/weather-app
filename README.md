@@ -4,23 +4,11 @@ A Vue 3 + Vite application that displays real-time weather conditions for select
 
 ## 📌 Project Overview
 
-This project is part of the **FrontEnd Challenge ProjectMark**, aiming to build a weather application that provides the **current temperature, humidity, and pressure** for three cities:
+This application provides the **current temperature, humidity, and pressure** for three cities:
 
 - **Joinville, SC (Brazil)**
 - **San Francisco, CA (USA)**
 - **Urubici, SC (Brazil)**
-
-### ✅ Features & Requirements
-
-- **Temperature displayed in Celsius**
-- **Humidity displayed as a percentage**
-- **Pressure information included**
-- **Temperature color coding:**
-  - 🔵 **5°C or below → Blue**
-  - 🟠 **Above 5°C and up to 25°C → Orange**
-  - 🔴 **Above 25°C → Red**
-- **Weather updates every 10 minutes**
-- **Weather data fetched from [OpenWeatherMap](https://openweathermap.org/)**
 
 ---
 
@@ -58,6 +46,20 @@ npm run build
 
 ```sh
 npm run lint
+```
+
+### ⚖️ Running Tests
+
+Run unit tests:
+
+```sh
+npm run test:unit
+```
+
+Run end-to-end (E2E) tests:
+
+```sh
+npm run test:e2e
 ```
 
 ---
