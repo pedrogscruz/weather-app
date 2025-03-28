@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
+
+body {
+  margin: 0;
+  background: black;
+}
+
+html,
+body,
+input {
+  font-family: Inter;
+}
