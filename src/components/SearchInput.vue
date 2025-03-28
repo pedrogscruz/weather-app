@@ -28,6 +28,7 @@ export default defineComponent({
       type="text"
       :placeholder="placeholder"
       class="search-input"
+      data-testid="search-input"
     />
   </div>
 </template>

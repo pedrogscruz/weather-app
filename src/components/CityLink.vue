@@ -45,7 +45,7 @@ export default defineComponent({
     v-else
     :to="'/city/' + city.id"
     :class="['city-link', city.weather[0].main.toLocaleLowerCase()].join(' ')"
-    data-testid="city-link"
+    :data-testid="`city-link-${city.id}`"
   >
     <div>
       <div>
