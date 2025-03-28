@@ -62,25 +62,26 @@ npm run lint
 
 ---
 
-## 🔎 Evaluation Criteria
+## 🛠️ Environment Variables Setup
 
-Your implementation will be evaluated based on:
+To run the application and fetch weather data from OpenWeatherMap, you need to set up an **environment variable** for your API key.
 
-- ✅ **Clear instructions** on how to run the project
-- ✅ **100% implementation** of the specified requirements
-- ✅ **Usability and user experience**
-- ✅ **Code quality, maintainability, and reusability**
-- ✅ **Bonus:** Automated tests (not required but appreciated!)
+1. Create a `.env` file in the root of the project.
+2. Add the following line, replacing `your_api_key_here` with your actual OpenWeatherMap API key:
+
+```sh
+VITE_API_KEY=your_api_key_here
+```
+
+3. Restart the development server to apply the changes:
+
+```sh
+npm run dev
+```
 
 ---
 
-## 🛠️ Customization & Configuration
-
-This project is built using **Vue 3 + Vite**. For additional configuration options, refer to the [Vite Documentation](https://vite.dev/config/).
-
----
-
-## 📙 Type Support for `.vue` Imports in TS
+## 📚 Type Support for `.vue` Imports in TS
 
 TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 

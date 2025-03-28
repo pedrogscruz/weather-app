@@ -1,0 +1,44 @@
+{
+  "coord": {
+    "lon": -49.5917,
+    "lat": -28.015
+  },
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 29.32,
+    "feels_like": 293.74,
+    "temp_min": 293.27,
+    "temp_max": 293.27,
+    "pressure": 1017,
+    "humidity": 92,
+    "sea_level": 1017,
+    "grnd_level": 877
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 1,
+    "deg": 275,
+    "gust": 1.48
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1743128430,
+  "sys": {
+    "country": "BR",
+    "sunrise": 1743067535,
+    "sunset": 1743110492
+  },
+  "timezone": -10800,
+  "id": 3445709,
+  "name": "Urubici",
+  "cod": 200
+}

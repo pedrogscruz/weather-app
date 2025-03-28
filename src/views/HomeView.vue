@@ -5,8 +5,8 @@ import CityLink from '@/components/CityLink.vue'
 import SearchInput from '@/components/SearchInput.vue'
 import type { WeatherGroupResponse } from '@/types/OpenWeatherApi'
 
-const API_KEY = ''
-const CITY_IDS = [123456, 5391959, 987654].join(',')
+const API_KEY = import.meta.env.VITE_API_KEY
+const CITY_IDS = [3459712, 5391959, 3445709].join(',')
 
 // Fetch weather data
 const fetchWeather = async () => {
@@ -20,7 +20,7 @@ const fetchWeather = async () => {
 const { data, isLoading, error } = useQuery<WeatherGroupResponse>({
   queryKey: ['weatherGroup'],
   queryFn: fetchWeather,
-  staleTime: 10 * 60 * 1000,
+  refetchInterval: 10 * 60 * 1000,
   retry: false,
 })
 
@@ -41,18 +41,20 @@ const filteredCities = computed(() => {
 
     <SearchInput v-model="searchTerm" :placeholder="$t('homeView.searchPlaceholder')" />
 
-    <div v-if="isLoading" class="loading" data-testid="loading">
+    <div v-if="error" class="message" data-testid="error-message">
+      ⚠️<br />
+      Oops! No internet connection.<br />
+      <span class="message-description">Please check your network and try again.</span>
+    </div>
+
+    <div v-else-if="isLoading" class="loading" data-testid="loading">
       <ul class="city-list">
         <li v-for="(_, index) in Array.from({ length: 3 })" :key="index">
           <CityLink />
         </li>
       </ul>
     </div>
-    <div v-else-if="error" class="message" data-testid="error-message">
-      ⚠️<br />
-      Oops! No internet connection.<br />
-      <span class="message-description">Please check your network and try again.</span>
-    </div>
+
     <div v-else-if="filteredCities.length === 0" class="message" data-testid="no-results">
       🌍🏙️<br />
       Oops! No results found.<br />

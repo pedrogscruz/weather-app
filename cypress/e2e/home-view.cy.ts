@@ -1,4 +1,4 @@
-import example from "../fixtures/example.json"
+import example from "../fixtures/city-group-example.json"
 
 describe('City Search', () => {
   it('filters cities when typing and finds Joinville', () => {
