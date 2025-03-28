@@ -4,7 +4,7 @@
   "exclude": ["./support/component.*"],
   "compilerOptions": {
     "isolatedModules": false,
-    "types": ["cypress"]
+    "types": ["@types/node", "cypress"]
   },
   "files": [],
   "references": [

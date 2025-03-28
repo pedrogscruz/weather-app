@@ -176,33 +176,4 @@ export default defineComponent({
 .clouds {
   background-image: url('/Clouds.jpeg');
 }
-
-.skeleton-loading {
-  position: relative;
-  color: transparent;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-shadow: none;
-}
-
-.skeleton-loading:before {
-  position: absolute;
-  content: ' ';
-  z-index: 2;
-  inset: 0;
-  animation: skeletonAnimation 1s linear infinite alternate;
-  border-radius: 3px;
-}
-
-@keyframes skeletonAnimation {
-  0% {
-    background-color: hsl(200, 20%, 70%);
-  }
-
-  100% {
-    background-color: hsl(200, 20%, 95%);
-  }
-}
 </style>
